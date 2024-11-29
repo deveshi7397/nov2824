@@ -1,3 +1,3 @@
 # nov2824
 created for APNA college git tutorial
-author = deveshi srivastava
+author = deveshi srivastava (apna college)
