@@ -1,8 +1,10 @@
+//var names can start with underscore or dollat sign, camelCase,
 var cityName = "new york";
 var a = "q";
 console.log(a.repeat(4));
 //dollar is allowed
-// syntax error invalid something
+// syntax error :- invalid or unexpected token
+//to run a js file in node instead of console, when node is already installed , in terminal(vscode) type node .\"nameoffile.js"
 
 //data types
 /*
@@ -14,15 +16,26 @@ primitive: 7
   null
   bigint
   symbol
-cxzv
 object data types: 3
   an object
-  array
-  date
+  an array
+  a date
 */
+var myFavNum = 5;
+console.log(myFavNum);
+myName = vinod;
+console.log(myName); //undefined
+myName1 = "vinod";
+console.log(myName1);
+var isRaining = false;
+var areYouAwesome = true; //cannot write True
+var vinod;
+console.log(vinod);
+var badMemories = null;
+console.log(badMemories);
 
 //ReferenceError : --is not defined
-const bigNum = 12731748701843333333333333333333333333333333333379401094912924180748174081;
+const bigNum = 12731748701843333333333333333333333333333333333379401094912924180748174081n;
 console.log(typeof bigNum);
 
 var myNum = 55;
@@ -277,8 +290,6 @@ do {
 console.log("you have entered a valid positive ", positiveNumber);
 
 var sum111 = 0;
-
-
 // find out what debugger does
 //debugger;
 for (var num = 1; num <= 10; num++) {
@@ -491,7 +502,6 @@ for (let item of fruits2) {
 for (let item2 in fruits2) {
   console.log(item2); //all indexes
 }
-
 
 //foreach
 /*

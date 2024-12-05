@@ -1,10 +1,20 @@
-<html>
-  <head> </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
   <body>
     <h1>welcome to world's best javascript course</h1>
-    <button onclick="alert('welcome, eoseo')">welcome</button>
+    <button onclick="alert('welcome, eoseo')">welcome</button> <!-- external js -->
     <button type="button" onclick="document.write(5 + 6)">Try it</button>
     <button onclick="window.print()">Print this page</button>
-    <script src="thapajs.js"></script>
-  </body>
+    <!-- 
+    <script>
+    alert("welcome, eoseo");
+    </script> 
+    --> <!--inline js-->
+    <script src="thapajs.js"></script> <!-- external js -->
+  </body><!-- we put script tag before end of body so that the rest of html loads while js can take time to load-->
 </html>
