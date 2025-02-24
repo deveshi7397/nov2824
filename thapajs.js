@@ -1,7 +1,11 @@
 //var names can start with underscore or dollat sign, camelCase,
+var myName = "vinod"; //53:00 in the video
+var myAge = 27;
+console.log(myAge);
+//
 var cityName = "new york";
 var a = "q";
-console.log(a.repeat(4));
+console.log("repeats a letter 4 times -> "+a.repeat(4));
 //dollar is allowed
 // syntax error :- invalid or unexpected token
 //to run a js file in node instead of console, when node is already installed , in terminal(vscode) type node .\"nameoffile.js"
@@ -21,27 +25,127 @@ object data types: 3
   an array
   a date
 */
+
+
+
+
+//1:12:00
+
+
+
+console.log("****************************Data Types*********************************");
 var myFavNum = 5;
-console.log(myFavNum);
-myName = vinod;
-console.log(myName); //undefined
-myName1 = "vinod";
-console.log(myName1);
+console.log(myFavNum+" \n");
+//var myName = vinod; 
+//console.log("prints the variable myName-> "+myName);thapajs.js:26 Uncaught ReferenceError: vinod is not defined
+
+
+//string
+var myName1 = "marie curie";
+console.log(""+myName1);
+
+//boolean
 var isRaining = false;
-var areYouAwesome = true; //cannot write True
+var areYouAwesome = true; //must not write True, case sensitive, only true
+console.log(isRaining);
+
+//undefined
 var vinod;
 console.log(vinod);
-var badMemories = null;
-console.log(badMemories);
 
+//null
+var badMemories = null;
+console.log(" "+badMemories);
+
+
+var var1;
+console.log(" "+var1);
 //ReferenceError : --is not defined
-const bigNum = 12731748701843333333333333333333333333333333333379401094912924180748174081n;
-console.log(typeof bigNum);
+
+
+//1:19:00
+//bigint
+const bigNum = 1273174870183333333333379401094912924180748174081n;
+console.log(" "+typeof bigNum);
+
+
+//1:23:00
+var myName2 = "vinod";
+console.log(myName2);
+console.log(typeof name2); //string
+
+console.log("  "+typeof badMemories); //object
+console.log(typeof null);
+
+
+console.log("****************************Conversion*********************************");
+//string to number 
+var myFavNum1 = "10";
+console.log(typeof myFavNum1); //string
+console.log(""+typeof +myFavNum1); //number
+console.log(typeof Number(myFavNum1)); //number
+ 
+
+
+//number to string
+
+
+
+
+let str = 5;
+console.log(typeof str);
+console.log(typeof String(str));
+console.log(typeof (str + ""));
+
+
+let variable01 = 7;
+let variable02 = String(variable01);
+console.log("prints the typeof variable02"+typeof variable02);
+let variable03 = variable01 + "";
+console.log("prints the typeof variable03"+typeof variable03);
+
+
+let sample = 5;
+console.log(""+ sample);
+console.log(""+ typeof sample);
+console.log(""+ typeof String(sample));
+console.log(""+typeof sample + ""); //string
+console.log(""+typeof (sample + "")); //number, this is used for conversion tr
+
+
+//1:31:00
+console.log("****************************Truthy/Falsy*********************************");
+//truthy falsy
+//truthy - true , any non empty string, non zero number , arrays and objects even if non empty
+//falsy - false, 0 , empty string , null, undefined , NaN
+
+var myName_ = "vinod";
+if (myName_) {
+  console.log("this is truthy value");
+}zxl
+else {
+  console.log("this is a falsy value");
+}
+
+console.log("****************************parseInt/parseFloat*********************************");
+
+//parseInt convert string into an integer
+const myString = "42";
+const myNumberji = parseInt(myString);
+console.log(myNumberji);
+
+
+//convert into a float
+const myString1 = "42.5";
+const myNumber1 = parseInt(myString1);
+console.log(myNumber1);
+
+
 
 var myNum = 55;
 console.log(typeof myNum); //number
-var myString = "55";
-console.log(typeof myString); //string
+var myString1 = "55";
+console.log(typeof myString1); //string
 var isOkay = true;
 console.log(typeof isOkay); //boolean
 var myVariable;
@@ -79,7 +183,7 @@ console.log(parseInt("1.9"));
 console.log(parseFloat("1.9"));
 console.log(parseInt("&123"));
 console.log(parseInt("-123"));
-console.log(parseInt("xyz"));
+console.log(parseInt("xyz")); //nan
 console.log(isNaN("vinod"));
 console.log(isNaN("5"));
 
@@ -88,6 +192,7 @@ if (5 == 5) {
 } else {
   console.log("not equal");
 }
+
 
 if (NaN == NaN) {
   console.log("both are equal");
@@ -99,7 +204,13 @@ if ("vinod" == "vinod") {
   console.log("both are equal");
 } else {
   console.log("not equal");
-}
+} 
+
+//1:51 in lecture
+
+const str1= "hello" + "World";
+console.log(str1);
+
 
 let sum1 = "vinod" - 5;
 console.log(sum1); // NaN
@@ -157,9 +268,9 @@ var addResult = 0.1 + 0.2; //
 console.log(addResult);
 console.log(addResult.toFixed(2)); //this will
 
-var str1 = "hello";
+var str11 = "hello";
 var str2 = "world";
-var str3 = str1 + str2;
+var str3 = str11 + str2;
 console.log(str3);
 
 //comparison operators
@@ -518,7 +629,7 @@ console.log("??????????????????????????????????for each ????????????????????????
 
 fruits2.forEach((curElem, index, arr2) => {
   console.log(`${curElem} ${index}` );
-    console.log(arr2);
+  //  console.log(arr2);
 });//fat arrow function 
 
 console.log("?????????????for each limitation ????????????????????????????????");
@@ -546,14 +657,14 @@ const myMapArr = fruits.map((curElem, index, arr) => {
  console.log(myMapArr);
 
 
-
+/*
 
 numbers.forEach((curElem) => {
     console.log(curElem *2);
     }
                 );
 
-const doubleValue = numbers.map(curElem) => {
+const doubleValue = numbers.map((curElem) => {
     console.log(curElem *2);
     return curElem * 2;
     }
@@ -568,14 +679,14 @@ console.log("foreach is Not used for returning a vslue. it goes over array eleme
 console.log("the original array remains unchanged and the function is applied to each array element, it return the new array of results");
 
 
-
+*/
 
 
 //CRUD on array
 
 console.log("CRUD on array");
 
-let fruits = ["apple", "orange", "mango" , "grapes" , "banana"];
+let fruits1 = ["apple", "orange", "mango" , "grapes" , "banana"];
 
 console.log( fruits.push("guava"));
 console.log(fruits);
@@ -637,3 +748,37 @@ participant["favorite_language"] = "JavaScript";
 console.log(participant);
 console.log(JSON.stringify(participant));
 //input type
+
+
+
+//Arrays as per book
+var catNames = new Array("larry", "fuzzball", "furly");
+var dogNames = ["shaggy", "tennesse", "dr spock"];
+
+//strings from commonlunge and stuff
+var oneString = "this is a string";
+console.log(oneString.toUpperCase());
+console.log(oneString.repeat(3));
+console.log(oneString.length);
+
+var oneNumber = 55;
+var st = String(oneNumber);
+console.log(typeof oneNumber);
+console.log(typeof st);
+console.log(parseInt(st) + 55); //converts a string to number then adds that to 55
+
+//objects commonlounge
+var participant = {
+  name: "Commonlounge",
+  country: "Canada",
+  favorite_numbers: [7, 42, 92],
+};
+participant["favorite_language"] = "JavaScript";
+console.log(participant);
+console.log(JSON.stringify(participant));
+//input type
+
+
+
+
+pinkpizzaprankpollutionpatrickparallel
